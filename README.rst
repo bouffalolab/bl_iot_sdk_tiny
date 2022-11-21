@@ -13,3 +13,8 @@ File an issue, if you have any issue or need any support.
 
 
 Many thanks for Mikkel Kroman's collection(https://github.com/mkroman/awesome-bouffalo)
+
+Setup ToolChain
+==================
+
+Please run script `sudo bash ./scripts/setup.sh`, which installs toolchains to `/opt/bouffalolab_sdk` and creates symbolic link `toolchain` to link it.
