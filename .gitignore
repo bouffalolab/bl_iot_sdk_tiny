@@ -1,3 +1,6 @@
+toolchain
+tools/flash_tool
+
 # IntelliJ/CLion
 .idea
 
