@@ -15,7 +15,7 @@
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doFirstReset" value="false"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doGdbServerAllocateConsole" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doGdbServerAllocateTelnetConsole" value="false"/>
-    <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doSecondReset" value="false"/>
+    <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doSecondReset" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doStartGdbCLient" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doStartGdbServer" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.doUseDtsMemMap" value="false"/>
@@ -28,7 +28,7 @@
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerExecutable" value="${openocd_gdbserver}"/>
     <intAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerGdbPortNumber" value="3333"/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerLog" value=""/>
-    <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerOther" value="-f tools/debug/openocd_cfg/if_bflb_link.cfg -f tools/debug/602/tgt_602_xip_attach"/>
+    <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerOther" value="-f tools/debug/openocd_cfg/if_bflb_link.cfg -f tools/debug/602/tgt_602_xip_attach.cfg"/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerTclPortNumber" value="6666"/>
     <intAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.gdbServerTelnetPortNumber" value="4444"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.openocd.openSerialPort" value="false"/>
@@ -46,9 +46,9 @@
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadSymbols" value="true"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.pcRegister" value="21000000"/>
     <intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="3333"/>
-    <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setPcRegister" value="false"/>
+    <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setPcRegister" value="true"/>
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setResume" value="false"/>
-    <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setStopAt" value="false"/>
+    <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setStopAt" value="true"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.stopAt" value="bfl_main"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsFileName" value=""/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsOffset" value=""/>
@@ -57,20 +57,20 @@
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useProjBinaryForImage" value="true"/>
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useProjBinaryForSymbols" value="true"/>
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useRemoteTarget" value="true"/>
-    <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="${openocd_gdbclient}"/>
+    <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="/home/qma/tools/FreedomStudio/SiFive/riscv64-unknown-elf-gcc-8.3.0-2019.08.0/bin/riscv64-unknown-elf-gdb"/>
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
     <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="0"/>
     <stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="customer_app/bl602_demo_event/build_out/bl602_demo_event.elf"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="/home/qma/zigbee/github/bl_iot_sdk_tiny/customer_app/sdk_app_throughput/bl602_slave/build_out/demo_slave.elf"/>
     <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="bl_iot_sdk"/>
     <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="cdt.managedbuild.config.gnu.cross.exe.debug.775426824.1346491460.1831207847.1918038709.1003828819"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
         <listEntry value="/bl_iot_sdk"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="4"/>
     </listAttribute>
-    <stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList context=&quot;Context string&quot;/&gt;&#13;&#10;"/>
+    <stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;memoryBlockExpressionList context=&quot;Context string&quot;/&gt;&#10;"/>
     <stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
 </launchConfiguration>
