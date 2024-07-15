@@ -270,14 +270,6 @@ EXTRA_CPPFLAGS ?=
 CPPFLAGS += -D BL_CHIP_NAME=\"$(BL_CHIP_NAME)\" -MMD -MP $(EXTRA_CPPFLAGS)
 CPPFLAGS += -DARCH_RISCV
 
-ifeq ("$(CONFIG_CHIP_NAME)", "BL702L")
-ifneq ($(CONFIG_GEN_ROM),1)
-ifneq ($(CONFIG_BUILD_ROM_CODE),1)
-CPPFLAGS += -DCFG_USE_ROM_CODE
-endif
-endif
-endif
-
 # Warnings-related flags relevant both for C and C++
 COMMON_WARNING_FLAGS = -Wall -Werror=all \
 	-Wno-error=unused-function \
@@ -423,6 +415,14 @@ CXXFLAGS := $(strip \
 
 endif
 export CFLAGS CPPFLAGS CXXFLAGS ASMFLAGS
+
+# Include common chip configuration
+ifeq ("$(CONFIG_CHIP_NAME)", "BL702")
+include $(BL60X_SDK_PATH)/components/platform/soc/bl702/bl702/bl702.mk
+endif
+ifeq ("$(CONFIG_CHIP_NAME)", "BL702L")
+include $(BL60X_SDK_PATH)/components/platform/soc/bl702l/bl702l/bl702l.mk
+endif
 
 # Set default values that were not previously defined
 CC ?= gcc
